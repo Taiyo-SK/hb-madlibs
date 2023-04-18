@@ -69,8 +69,15 @@ def show_madlib():
     noun = request.args.get("noun")
     person = request.args.get("person")
     adjective = request.args.get("adjective")
+    feelings = request.args.getlist("feelings")
 
-    return render_template("madlib.html", color=color, person=person, noun=noun, adjective=adjective )
+    # save the checked feelings into a list
+    return render_template("madlib.html", 
+                           color=color, 
+                           person=person, 
+                           noun=noun, 
+                           adjective=adjective,
+                           feelings=feelings)
 
 
 if __name__ == "__main__":
