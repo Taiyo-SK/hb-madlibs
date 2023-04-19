@@ -71,7 +71,7 @@ def show_madlib():
     adjective = request.args.get("adjective")
     feelings = request.args.getlist("feelings")
 
-    # save the checked feelings into a list
+ 
     return render_template("madlib.html", 
                            color=color, 
                            person=person, 
